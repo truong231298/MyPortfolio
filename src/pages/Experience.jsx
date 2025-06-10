@@ -1,29 +1,60 @@
 // src/pages/Experience.jsx
 import { motion } from 'framer-motion';
-import backgroundImg from "../assets/backgroundImage.jpg";
+import backgroundImg from "../assets/17973908.jpg";
 
 const experiences = [
     {
-        company: 'Arrowai Industries',
-        role: 'Head Content Creator',
-        period: '2022 - 2023',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet massa sed leo molestie ultrices in non mi. Suspendisse mollis nisl ac aliquet pretium.'
-    },
-    {
-        company: 'Borcelle',
-        role: 'Junior Content Creator',
-        period: '2021 - 2022',
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet massa sed leo molestie ultrices in non mi. Suspendisse mollis nisl ac aliquet pretium.'
-    },
-    {
-        company: 'Borcelle',
-        role: 'Junior Content Creator',
+        company: 'GREEN KONOHA',
+        role: 'landscaper',
         period: '2020 - 2021',
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet massa sed leo molestie ultrices in non mi. Suspendisse mollis nisl ac aliquet pretium.'
+        'Carry out the work of managing and maintaining materials (lawn mowers, pruning shears, chainsaws, etc.) Participate in the implementation of the company landscape construction projects (check drawings, make plans for planning, designing, renovating and managing landscapes). Design landscape items and miniature landscapes in areas within the company.',
+        link: ''
+    },
+    {
+        company: 'WINCOMMERCE GENERAL TRADING SERVICES JOINT STOCK COMPANY',
+        role: 'Salesperson Level 1',
+        period: '2022 - 2023',
+        description:
+            'Maintain image, ensure store hygiene and customer service standards\n' +
+            'Perform delivery and receipt of goods according to procedures\n' +
+            'Display, arrange, preserve goods, sell, pay, advise, support customers\n' +
+            'Filter/destroy poor quality goods, check expiry date...\n' +
+            'Use and preserve assets, manage goods\n' +
+            'Periodically or suddenly inventory goods/assets according to regulations.\n' +
+            'Perform other tasks as required by management',
+        link: ''
+    },
+    {
+        company: 'Leetcode',
+        role: 'Participant',
+        period: '2023 - Now',
+        description: 'Practice algorithmic skills and logical thinking through more than 850 exercises from easy to advanced. Focus on topics related to real-world problem solving skills such as:\n' +
+            '- Handling arrays, strings, recursion and data structures.\n' +
+            '- Improve the ability to write optimal and readable code.',
+        link: 'https://leetcode.com/u/truong231298/',
+    },
+    {
+        company: 'Frontend Mentor',
+        role: 'Participant',
+        period: '2024 - Now',
+        description: 'Take on multiple challenges from platforms like Frontend Mentor to practice building real-world interfaces, focusing on:\n' +
+            '- Responsive Design with Tailwind CSS\n' +
+            '- Implementing company-standard React components\n' +
+            '- Ensuring browser compatibility and user experience',
+        link: 'https://www.frontendmentor.io/profile/truong231298'
+    },
+    {
+        company: 'Kaggle Projects',
+        role: 'Participant',
+        period: '2024 - Now',
+        description: 'Take exams and notebooks on basic data analysis, using Python & pandas:\n' +
+            '- Simple data analysis and visualization of results\n' +
+            '- Apply logical thinking to information processing and visualization\n' +
+            '- Focus on improving data reading and result presentation skills',
+        link: 'https://www.kaggle.com/phanlthanhtrng'
     }
+
 ];
 
 export default function Experience() {
@@ -48,7 +79,7 @@ export default function Experience() {
                 </motion.div>
 
                 {/* Big year range in background */}
-                <div className="text-[8rem] md:text-[5rem] font-extrabold text-primary/20 absolute top-10 right-6 pointer-events-none select-none leading-none">
+                <div className="text-[4rem] md:text-[5rem] font-extrabold text-primary/20 absolute top-10 right-6 pointer-events-none select-none leading-none">
                     2020 - 2023
                 </div>
 
@@ -66,8 +97,21 @@ export default function Experience() {
                             >
                                 <div className="text-accent mt-1 mr-4 text-2xl">»»</div>
                                 <div>
-                                    <h3 className="text-2xl font-semibold">{exp.company}</h3>
-                                    <p className="text-gray-300 italic">{exp.role} | {exp.period}</p>
+                                    <h3 className="text-2xl font-semibold">
+                                        {exp.link ? (
+                                            <a
+                                                href={exp.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-primary hover:underline"
+                                            >
+                                                {exp.company}
+                                            </a>
+                                        ) : (
+                                            exp.company
+                                        )}
+                                    </h3>
+                                    <p className="text-gray-500 italic">{exp.role} | {exp.period}</p>
                                 </div>
                             </motion.div>
                         ))}

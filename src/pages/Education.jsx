@@ -1,22 +1,17 @@
 // src/pages/Education.jsx
 import { motion } from 'framer-motion';
-import backgroundImg from "../assets/backgroundImage.jpg";
+import backgroundImg from "../assets/17973908.jpg";
 
 const educationItems = [
     {
-        title: 'Senior Vocational High School',
-        institution: 'School Of Art',
-        year: '2012'
-    },
-    {
         title: 'Bachelor Degree',
-        institution: 'Borcelle Art University | Graphic Design Bachelor',
-        year: '2017'
+        institution: 'Nong Lam University, Ho Chi Minh | landscape and horticulture engineering',
+        year: '2016 - 2022'
     },
     {
-        title: 'Master Degree',
-        institution: 'Borcelle Art University | Master of Communication',
-        year: '2019'
+        title: 'Student',
+        institution: 'Aptech Computer Education | full stack programming',
+        year: '2023 - Now'
     }
 ];
 
@@ -37,11 +32,10 @@ export default function Education() {
                     transition={{ duration: 0.8 }}
                     className="lg:w-1/2 w-full lg:pr-12 mb-12 lg:mb-0"
                 >
-                    <h2 className="text-4xl md:text-5xl font-bold mb-2 text-primary">Education</h2>
+                    <h2 className="text-4xl md:text-5xl font-bold mb-2 text-primary text-black">Education</h2>
                     <div className="w-24 h-1 bg-accent mb-6" />
-                    <p className="text-gray-200 max-w-md">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet massa sed leo molestie ultrices in non mi.
-                        Suspendisse mollis nisl ac aliquet pretium. Suspendisse dignissim, odio non hendrerit suscipit, lorem ipsum tempus tortor, suscipit vestibulum velit quam nec nibh.
+                    <p className="text-gray-500 max-w-md">
+                        I majored in Information Technology, with a focus on web application and user interface development. During my studies, I actively participated in Frontend-related courses, from basic HTML/CSS to technologies such as JavaScript and React. In addition to the main curriculum, I also actively participated in practical courses to improve my programming and interface design skills.
                     </p>
                 </motion.div>
 
@@ -53,7 +47,7 @@ export default function Education() {
                     className="lg:w-1/2 w-full"
                 >
                     {/* Year large text */}
-                    <div className="text-[8rem] md:text-[10rem] font-extrabold text-primary/20 top-16 right-6 pointer-events-none select-none leading-none">
+                    <div className="text-[3rem] md:text-[6rem] font-extrabold text-primary/20 top-16 right-6 pointer-events-none select-none leading-none">
                         2012 - 2019
                     </div>
                     {/* List */}
@@ -62,7 +56,7 @@ export default function Education() {
                             <div key={i} className="pl-4 border-l-2 border-accent">
                                 <h3 className="text-2xl font-semibold text-light">{item.title}</h3>
                                 <p className="text-gray-300">{item.institution}</p>
-                                <span className="text-sm text-gray-400">{item.year}</span>
+                                <span className="text-sm text-gray-500">{item.year}</span>
                             </div>
                         ))}
                     </div>

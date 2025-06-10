@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import myPicture from "../assets/myPicture.jpg";
-import backgroundImg from "../assets/backgroundImage.jpg";
+import backgroundImg from "../assets/17973908.jpg";
 
 export default function Home(){
     return(
@@ -21,14 +21,14 @@ export default function Home(){
                     className="lg:w-1/2 text-center lg:text-left"
                 >
                     <p className="text-accent uppercase tracking-widest mb-2 text-blue-500">Hello !!!</p>
-                    <h1 className="text-5xl md:text-7xl font-bold mb-4 text-white">
+                    <h1 className="text-5xl md:text-7xl font-bold mb-4 text-black">
                         I’m <span className="text-accent">Truong Phan</span>
                     </h1>
                     <p className="uppercase text-sm text-accent tracking-wide mb-6 bg-blue-500 rounded-md p-1">
                         Frontend Developer & Game UI Enthusiast
                     </p>
-                    <p className="text-gray-200 max-w-md mb-8">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet massa sed leo molestie ultrices.
+                    <p className="text-gray-500 max-w-md mb-8">
+                        I specialize in building responsive and interactive web interfaces with clean code and intuitive user experiences. I'm passionate about frontend technologies, game-inspired design, and continuous learning.
                     </p>
                     <a
                         href="/projects"
